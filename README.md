@@ -11,7 +11,7 @@ git clone https://github.com/camillebnm/neural_shape_morphing.git
 ```
 ## Installation
 ```
-cd implicit-flow
+cd neural_shape_morphing
 conda env create -f environment.yml
 conda activate impl-flow
 ```
