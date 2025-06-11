@@ -1,0 +1,31 @@
+network:
+  omega_0: 60
+  hidden_layer_nodes: [128, 128, 128,128,128,128]
+  init_method: initial_condition
+
+training:
+  n_epochs: 4001
+  checkpoints_at_every_epoch: 20000
+  checkpoint_times: [-0.1, -0.025, -0.05, 0, 0.05, 0.025, 0.1]
+
+loss:
+  type: morphing_sirens
+
+training_data:
+  batchsize: 20000
+  size : 2
+  timesampler:
+    range: [0., 1.]
+  mesh:
+    data/pave.ply:
+      ni: ni/pave.pth
+      omega_0: 60
+      t: -0.
+    data/twist.ply:
+      ni: ni/twist.pth
+      omega_0: 60
+      t: 1.
+
+optimizer : 
+    type : adam
+    lr : 1e-4
