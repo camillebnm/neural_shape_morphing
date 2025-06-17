@@ -1,8 +1,14 @@
 # Implicit-flow
 
-This repository provides the code to reproduce the results in *Volume Preserving Neural Shape Morphing*, Camille Buonomo, Julie Digne, Raphaëlle Chaine, Symposium on Geometry Processing 2025 (Computer Graphics Forum).
+This repository provides the code to reproduce the results in [*Volume Preserving Neural Shape Morphing*, Camille Buonomo, Julie Digne, Raphaëlle Chaine, Symposium on Geometry Processing 2025 (Computer Graphics Forum).](https://hal.science/hal-05113996)
 
 ![teaser](figs/teaser.png)
+
+## Prerequisites
+
+1. A python [conda](https://www.anaconda.com/) like virtual environment manager
+2. (GPU only) nvcc 12.0 and CUDA 12.6
+3. (Optional) A software to visualize Polygon File Format (.ply) meshes, for exemple [MeshLab](https://www.meshlab.net/)
 
 
 ## Clone
