@@ -1,4 +1,4 @@
-# Implicit-flow
+# Code for volume preserving neural shape morphing
 
 This repository provides the code to reproduce the results in [*Volume Preserving Neural Shape Morphing*, Camille Buonomo, Julie Digne, Raphaëlle Chaine, Symposium on Geometry Processing 2025 (Computer Graphics Forum).](https://hal.science/hal-05113996)
 
