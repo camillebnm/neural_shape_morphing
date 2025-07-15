@@ -7,7 +7,7 @@ This repository provides the code to reproduce the results in [*Volume Preservin
 ## Prerequisites
 
 1. A python [conda](https://www.anaconda.com/) like virtual environment manager
-2. (GPU only) nvcc 12.0 and CUDA 12.6
+2. (GPU only) nvcc 12.0 and CUDA 12.6 with 16GB memory
 3. (Optional) A software to visualize Polygon File Format (.ply) meshes, for exemple [MeshLab](https://www.meshlab.net/)
 
 
@@ -56,6 +56,7 @@ Other folders are organised as follow :
 * `data/` - contains the meshes of the test shapes
 
 ## Run an experiment
+
 
 Given a proper configuration file (see folder `experiments/`), an experiment can be run as follows
 ```
@@ -129,8 +130,17 @@ python sdf_train.py --mesh <path_to_mesh.ply> --save <path_to_save>
 ```
 * Use the file `reconstruct.py` to obtain an oriented mesh from an implicit neuronal SDF with SIREN achitecture with the parameter `-t None`
 
-
-
+## Replicate results
+To replicate the fisrt of figure 5 of our paper, please run the following : 
+```
+python reconstruct pretrained/morph_blob-colonne_ADADIV/models/best.pth results/morph_blob-column_ADADIV/ -t linspace 24 -r 256
+meshlab results/morph_blob-colonne_ADADIV/time_0.ply
+meshlab results/morph_blob-colonne_ADADIV/time_5.ply
+meshlab results/morph_blob-colonne_ADADIV/time_10.ply
+meshlab results/morph_blob-colonne_ADADIV/time_12.ply
+meshlab results/morph_blob-colonne_ADADIV/time_15.ply
+meshlab results/morph_blob-colonne_ADADIV/time_23.ply
+```
 ## Related work
 
 - NISE [Neural Implicit Surface Evolution using Differential Equations](https://arxiv.org/abs/2201.09636) [github repo](https://dsilvavinicius.github.io/nise/)
