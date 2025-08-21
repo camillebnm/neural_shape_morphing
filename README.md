@@ -133,7 +133,7 @@ python sdf_train.py --mesh <path_to_mesh.ply> --save <path_to_save>
 ## Replicate results
 To replicate the fisrt of figure 5 of our paper, please run the following : 
 ```
-python reconstruct pretrained/morph_blob-colonne_ADADIV/models/best.pth results/morph_blob-column_ADADIV/ -t linspace 24 -r 256
+python reconstruct.py pretrained/morph_blob-colonne_ADADIV/models/best.pth results/morph_blob-column_ADADIV/ -t linspace 24 -r 256
 meshlab results/morph_blob-colonne_ADADIV/time_0.ply
 meshlab results/morph_blob-colonne_ADADIV/time_5.ply
 meshlab results/morph_blob-colonne_ADADIV/time_10.ply
